@@ -20,7 +20,7 @@ export default function TabLayout() {
           tabBarLabelStyle: { fontSize: 12 },
           tabBarStyle: {
             backgroundColor: Colors[colorScheme ?? 'light'].background,
-            marginTop: 50,
+            marginTop: 35,
           },
         }}
       >
