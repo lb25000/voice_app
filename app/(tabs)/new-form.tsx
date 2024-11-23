@@ -26,7 +26,7 @@ const NewForm = () => {
   const [nameFeedback, setNameFeedback] = useState('');
   const [phoneFeedback, setPhoneFeedback] = useState('');
   const [noteFeedback, setNoteFeedback] = useState('');
-  const [inputHeightName, setInputHeightName] = useState(40);
+  const [inputHeightName, setInputHeightName] = useState(50);
   const [inputHeightPhone, setInputHeightPhone] = useState(40);
   const [inputHeightNote, setInputHeightNote] = useState(100);
   const [isTalking, setIsTalking] = useState(false);
@@ -270,7 +270,7 @@ const NewForm = () => {
             validateInput(text, "name");
             setName(text);
           }}
-          onContentSizeChange={(event) => setInputHeightName(event.nativeEvent.contentSize.height)}
+          onContentSizeChange={(event) => setInputHeightName(Math.max(50, event.nativeEvent.contentSize.height))}
         />
         <TouchableOpacity
           onPressIn={() => setIsNamePressed(true)}
